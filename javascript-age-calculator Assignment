@@ -1,0 +1,28 @@
+    var dobInput = prompt("Enter your Date of Birth (YYYY-MM-DD)");
+    var dob = new Date(dobInput);
+    var today = new Date();
+
+    var diffMs = today - dob;
+
+    var totalSeconds = Math.floor(diffMs / 1000);
+
+    var totalMinutes = Math.floor(totalSeconds / 60);
+
+    var totalHours = Math.floor(totalMinutes / 60);
+
+    var totalDays = Math.floor(totalHours / 24);
+
+    var years = Math.floor(totalDays / 365);
+
+    var remainingDays = totalDays % 365;
+
+    var months = Math.floor(remainingDays / 30);
+
+    var days = remainingDays % 30;
+
+    document.write("<h3>Your Exact Age</h3>");
+    document.write("Years: " + years + "<br>");
+    document.write("Months: " + months + "<br>");
+    document.write("Days: " + days + "<br>");
+    document.write("Total Hours: " + totalHours + "<br>");
+    document.write("Total Seconds: " + totalSeconds + "<br>");
